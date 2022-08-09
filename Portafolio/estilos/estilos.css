@@ -1,0 +1,360 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 
+    Inicio del header 
+*/
+
+header {
+    position: relative;
+    background-color:white;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    margin: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.logo_nombre {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    margin-left: 16px;
+}
+
+.logo img {
+    width: 56px;
+}
+
+.logo_nombre .nombre {
+    font-style: normal;
+    font-size: 20px;
+}
+
+.menu { 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    margin-right: 16px;
+}
+
+.navegacion ul {
+    display: flex;
+    column-gap: 16px;
+    row-gap: 5px;
+}
+
+.navegacion il {
+    text-align: center;
+    align-items: flex-start;
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: black;
+}
+
+.navegacion {
+    display: flex;
+    background-color: white;
+}
+
+.boton_menu {
+    background-color: white;
+    padding: 16px 18px;
+    border-radius: 60px;
+    border: 1.5px solid black;
+    font-weight: bold;
+}
+
+#boton_menu {
+    display: none;
+}
+
+/*
+    section projects
+*/
+
+    .cont_pro {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%; 
+    }
+
+    .pro_pro {
+        margin: 16px;
+    }
+
+    #titulo {
+        display: flex;
+    }
+
+    .textos {
+        margin: auto;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .bicing {
+        display: flex;
+    }
+    
+    .imagen {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    figure {
+        padding: 0;
+        margin: 0;
+    }
+
+
+    a img{ 
+        max-width: 100%;
+    }
+
+    /*
+        section about
+    */
+    
+    
+
+/*
+    Inicio footer
+*/
+
+.footer {
+    height: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+}
+
+.enlaces ul {
+    display: flex;
+}
+
+.enlaces li {
+    list-style: none;
+}
+
+.enlaces img {
+    height: 24px;
+    width: 24px;
+    margin: 16px;
+}
+
+/*
+    Fin Footer
+*/
+
+/*
+    DESKTOP
+*/
+
+@media (min-width: 800px) {
+
+    /* header */
+
+    .navegacion {
+        display: block;
+    }
+
+    .boton_menu,
+    #boton_menu {
+        display: none;
+    }
+
+    /* section */
+
+    #titulo {
+        display: flex;
+    }
+
+    .cita {
+        text-align: left;
+    }
+
+    .section {
+        width: 600px;
+        margin: auto;
+    }
+
+    /* section projects */
+
+    #titulo {
+        margin: 50px;
+        display: block;
+        text-align: center;
+    }
+    
+    .titulo .subtitulo {
+        font-style: normal;
+    }
+    
+    #uxui, 
+    #grafico,
+    #grafico2 {
+        display: flex;
+        justify-content: flex-start;
+        column-gap: 16px;
+    }
+    
+    #grafico,
+    #grafico2 {
+        margin-top: 70px;
+    }
+    
+    .bicing, 
+    .make_music, 
+    .mapple_zoo, 
+    .fisica_quimica, 
+    .news_paper, 
+    .sketching {
+        width: 584px;
+        height: 367px;
+        margin: auto;
+    }
+
+    .cont_pro {
+        margin-bottom: 120px;
+    }
+
+    /* Section about */
+
+    #sect_desc {
+        display: flex;
+        min-width: 100%;
+        padding: 16px;
+    }
+    
+    .descripcion {
+        column-gap: 16px;
+        max-width: 1100px;
+    }
+
+    .texto {
+        width: 390px;
+    }
+
+    .texto p {
+        text-align: left;
+    }
+
+    .photo img{
+        width: 390px;
+    }
+    
+
+}
+
+/*
+    MOBILE
+*/
+
+@media (max-width: 799px) {
+
+    /* header */
+
+    .navegacion {
+        width: 90%;
+        max-width: 200px;
+        position: fixed;
+        top: 0;
+        left: -200px;
+        height: 100%;
+        transition: left 0.3s ease-out;
+    }
+
+    .navegacion ul {
+        flex: 1;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .navegacion li {
+        padding: 24px;
+    }
+
+    #boton_menu:checked + .navegacion {
+        left: 0;
+    }
+
+    /* section home */
+
+    .section {
+        margin: auto;
+        max-width: 600px;
+    }
+
+    .texto {
+        margin: 16px;
+    }
+
+    .texto p {
+        text-align: left;
+    }
+
+    /* section projects */
+
+    .bicing, 
+    .make_music, 
+    .mapple_zoo, 
+    .fisica_quimica, 
+    .news_paper, 
+    .sketching {
+        max-width: 100%;
+        margin: auto;
+    }
+    
+    /* section about */    
+
+    .descripcion {
+        margin: auto;
+        max-width: 600px;
+    }
+
+    .texto {
+        max-width: 100%;
+        margin: 16px;
+    }
+
+    .photo { 
+        margin: 16px;
+    }
+
+    .photo img{
+        max-width: 100%;
+    }
+
+    
+
+   
+}
