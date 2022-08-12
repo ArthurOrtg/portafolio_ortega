@@ -63,12 +63,22 @@ ul {
     row-gap: 5px;
 }
 
-.navegacion il {
+.navegacion .link {
     text-align: center;
     align-items: flex-start;
+    padding: 16px;
+    transition-property: outline;
+    transition-duration: 200ms;
+}
+
+.link:hover {
+    border-radius: 4px;
+    outline: 1.2px solid black;
+    color: white;
 }
 
 .navegacion a {
+    margin: auto;
     text-decoration: none;
     color: black;
 }
@@ -80,8 +90,8 @@ ul {
 
 .boton_menu {
     background-color: white;
-    padding: 16px 18px;
-    border-radius: 60px;
+    padding: 16px 20px;
+    border-radius: 80px;
     border: 1.5px solid black;
     font-weight: bold;
 }
@@ -91,55 +101,157 @@ ul {
 }
 
 /*
+    section index
+*/
+
+.section {
+    display: flex;
+}
+
+.texto_cita {
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    flex: 1;
+}
+
+.texto {
+    flex: 1;
+}
+
+/*
     section projects
 */
 
-    .cont_pro {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%; 
-    }
+.cont_pro {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%; 
+}
 
-    .pro_pro {
-        margin: 16px;
-    }
+.pro_pro {
+    margin: 16px;
 
-    #titulo {
-        display: flex;
-    }
+}
 
-    .textos {
-        margin: auto;
-    }
+#titulo {
+    display: flex;
+}
 
-    p {
-        text-align: center;
-    }
+.textos {
+    margin: auto;
+}
 
-    .bicing {
-        display: flex;
-    }
     
-    .imagen {
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
+.imagen {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
 
-    figure {
-        padding: 0;
-        margin: 0;
-    }
+figure {
+    padding: 0;
+    margin: 0;
+    transition-property: opacity;
+    transition-duration: 200ms;
+}
+
+.pro_pro figure:hover {
+    opacity: 0.5;
+}
+
+.pro_pro img{ 
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.pro_pro a {
+    margin: auto;
+    text-decoration: none;
+    color: black;
+}
+
+.nombre_project {
+    z-index: 99;
+    position: static;
+}
+
+/*
+    section about
+*/
+
+.descripcion {
+    margin: auto;
+    max-width: 600px;
+}
+
+.texto {
+    max-width: 100%;
+    margin: 16px;
+}
+
+.photo { 
+    margin: 16px;
+}
+
+.photo img{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+/*
+    Section contact
+*/
+
+.info {
+    margin: 16px;
+}
+
+.info img{
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+h3, p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#form {
+    margin: 16px;
+}
+
+.form_nombre,
+.form_email,
+.form_texto {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.caja {
+    height: 40px;
+}
+
+.boton {
+    height: 40px;
+    width: 360px;
+    background-color: black;
+    border: 0px;
+}
 
 
-    a img{ 
-        max-width: 100%;
-    }
-
-    /*
-        section about
-    */
-    
-    
 
 /*
     Inicio footer
@@ -192,7 +304,7 @@ ul {
         display: none;
     }
 
-    /* section */
+    /* section index */
 
     #titulo {
         display: flex;
@@ -207,6 +319,11 @@ ul {
         margin: auto;
     }
 
+    .texto_cita .cita {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
     /* section projects */
 
     #titulo {
@@ -219,17 +336,29 @@ ul {
         font-style: normal;
     }
     
+    .pro_pro {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        max-width: 100%;
+    }
+
     #uxui, 
     #grafico,
     #grafico2 {
         display: flex;
         justify-content: flex-start;
         column-gap: 16px;
+
+    }
+
+    .portada {
+        flex: 1;
     }
     
     #grafico,
     #grafico2 {
-        margin-top: 70px;
+        margin-top: auto;
     }
     
     .bicing, 
@@ -240,7 +369,7 @@ ul {
     .sketching {
         width: 584px;
         height: 367px;
-        margin: auto;
+        margin: 16px;
     }
 
     .cont_pro {
@@ -253,11 +382,17 @@ ul {
         display: flex;
         min-width: 100%;
         padding: 16px;
+        flex-direction: column;
     }
     
     .descripcion {
         column-gap: 16px;
         max-width: 1100px;
+        display: flex;
+    }
+
+    h1 {
+        margin: auto;
     }
 
     .texto {
@@ -271,7 +406,34 @@ ul {
     .photo img{
         width: 390px;
     }
+
+    /* Section contact */
+
+    #seccioncontacto {
+        display: flex;
+        flex-direction: column;
+    }
     
+    #contacto {
+        display: flex;
+        min-width: 100%;
+        justify-content: space-around;
+    }
+
+    .info img{
+        width: 390px;
+    }
+
+
+    .caja .boton {
+        min-width: 400px;
+    }
+
+    .form_nombre,
+    .form_email,
+    .form_texto {
+        width: 390px;
+    }
 
 }
 
@@ -334,26 +496,14 @@ ul {
         margin: auto;
     }
     
-    /* section about */    
+    /* section contact */    
 
-    .descripcion {
-        margin: auto;
-        max-width: 600px;
-    }
 
-    .texto {
-        max-width: 100%;
-        margin: 16px;
-    }
-
-    .photo { 
-        margin: 16px;
-    }
-
-    .photo img{
+    .form_nombre,
+    .form_email,
+    .form_texto {
         max-width: 100%;
     }
-
     
 
    
