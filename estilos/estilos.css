@@ -3,6 +3,9 @@ body {
     margin: 0;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 * {
@@ -206,6 +209,16 @@ figure {
     Section contact
 */
 
+.contenido .marco {
+    padding: 0;
+    margin: 0;
+}
+
+#marco {
+    padding: 0;
+    margin: 0;
+}
+
 .info {
     margin: 16px;
 }
@@ -218,8 +231,7 @@ figure {
 .contacto {
     display: flex;
     flex-direction: column;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin: 16px;
 }
 
 h3, p {
@@ -227,31 +239,17 @@ h3, p {
     margin-bottom: 8px;
 }
 
-#form {
+.box {
+    padding: 0;
+}
+
+.formulario {
     margin: 16px;
 }
 
-.form_nombre,
-.form_email,
-.form_texto {
-    display: flex;
-    flex-direction: column;
-    margin-top: 16px;
-    margin-bottom: 16px;
+.linea .boton {
+    padding: 0;
 }
-
-.caja {
-    height: 40px;
-}
-
-.boton {
-    height: 40px;
-    width: 360px;
-    background-color: black;
-    border: 0px;
-}
-
-
 
 /*
     Inicio footer
@@ -262,6 +260,7 @@ h3, p {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: auto;
 }
 
 .todo {
@@ -306,10 +305,6 @@ h3, p {
 
     /* section index */
 
-    #titulo {
-        display: flex;
-    }
-
     .cita {
         text-align: left;
     }
@@ -325,6 +320,11 @@ h3, p {
     }
 
     /* section projects */
+
+    .cont_pro {
+        padding-top: 16px;
+        margin-bottom: 120px;
+    }
 
     #titulo {
         margin: 50px;
@@ -372,17 +372,15 @@ h3, p {
         margin: 16px;
     }
 
-    .cont_pro {
-        margin-bottom: 120px;
-    }
 
     /* Section about */
 
     #sect_desc {
         display: flex;
         min-width: 100%;
-        padding: 16px;
+        padding-top: 16px;
         flex-direction: column;
+        margin: 0;
     }
     
     .descripcion {
@@ -396,8 +394,9 @@ h3, p {
     }
 
     .texto {
-        width: 390px;
+        width: 500px;
     }
+
 
     .texto p {
         text-align: left;
@@ -409,30 +408,34 @@ h3, p {
 
     /* Section contact */
 
-    #seccioncontacto {
+    #seccion-contacto {
+        padding-top: 16px;
         display: flex;
         flex-direction: column;
     }
     
     #contacto {
         display: flex;
-        min-width: 100%;
-        justify-content: space-around;
+        flex-direction: column;
     }
 
     .info img{
-        width: 390px;
+        width: 500px;
     }
 
-
-    .caja .boton {
-        min-width: 400px;
+    #marco {
+        display: flex;
+        column-gap: 24px;
+        justify-content: center;
     }
 
-    .form_nombre,
-    .form_email,
-    .form_texto {
-        width: 390px;
+    .box {
+        width: 500px;
+        margin: 0;
+    }
+
+    .formulario {
+        width: 468px;
     }
 
 }
@@ -497,14 +500,10 @@ h3, p {
     }
     
     /* section contact */    
-
-
-    .form_nombre,
-    .form_email,
-    .form_texto {
-        max-width: 100%;
-    }
     
-
+    .contenido {
+        display: flex;
+        flex-direction: column;
+    }
    
 }
