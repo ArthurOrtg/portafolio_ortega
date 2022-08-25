@@ -1,0 +1,450 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+* {
+  box-sizing: border-box; }
+
+/* 
+    Inicio del header 
+*/
+header {
+  position: relative;
+  background-color: white; }
+
+.contenedor {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  margin: auto;
+  padding-top: 16px;
+  padding-bottom: 16px; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.logo_nombre {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  margin-left: 16px; }
+
+.logo img {
+  width: 56px; }
+
+.logo_nombre .nombre {
+  font-style: normal;
+  font-size: 20px; }
+  .logo_nombre .nombre a {
+    text-decoration: none;
+    color: black; }
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  margin-right: 16px; }
+
+.navegacion {
+  display: flex;
+  background-color: white; }
+  @media (min-width: 800px) {
+    .navegacion {
+      display: block; } }
+  @media (max-width: 799px) {
+    .navegacion {
+      width: 90%;
+      max-width: 200px;
+      position: fixed;
+      top: 0;
+      left: -200px;
+      height: 100%;
+      transition: left 0.3s ease-out; } }
+  .navegacion ul {
+    display: flex;
+    column-gap: 16px;
+    row-gap: 5px; }
+    @media (max-width: 799px) {
+      .navegacion ul {
+        flex: 1;
+        flex-direction: column;
+        margin: auto; } }
+  @media (max-width: 799px) {
+    .navegacion li {
+      padding: 24px; } }
+  .navegacion a {
+    margin: auto;
+    text-decoration: none;
+    color: black; }
+  .navegacion .link {
+    text-align: center;
+    align-items: flex-start;
+    padding: 16px;
+    transition-property: outline;
+    transition-duration: 200ms; }
+    .navegacion .link:hover {
+      border-radius: 4px;
+      outline: 1.2px solid black;
+      color: white; }
+
+.boton_menu {
+  background-color: white;
+  padding: 16px 20px;
+  border-radius: 80px;
+  border: 1.5px solid black;
+  font-weight: bold; }
+  @media (min-width: 800px) {
+    .boton_menu {
+      display: none; } }
+
+#boton_menu {
+  display: none; }
+  @media (min-width: 800px) {
+    #boton_menu {
+      display: none; } }
+
+@media (max-width: 799px) {
+  #boton_menu:checked + {
+    left: 0; } }
+
+@media (max-width: 799px) {
+  #boton_menu:checked + .navegacion {
+    left: 0; } }
+
+/*
+    section index
+*/
+.section {
+  display: flex; }
+  @media (min-width: 800px) {
+    .section {
+      width: 600px;
+      margin: auto; } }
+  @media (max-width: 799px) {
+    .section {
+      margin: auto;
+      max-width: 600px; } }
+
+@media (min-width: 800px) {
+  .cita {
+    text-align: left; } }
+
+.texto_cita {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  flex: 1; }
+  @media (min-width: 800px) {
+    .texto_cita .cita {
+      margin-top: 40px;
+      margin-bottom: 40px; } }
+
+.texto {
+  flex: 1;
+  max-width: 100%;
+  margin: 16px; }
+  @media (max-width: 799px) {
+    .texto {
+      margin: 16px; } }
+  @media (max-width: 799px) {
+    .texto p {
+      text-align: left; } }
+
+/*
+    section projects
+*/
+.cont_pro {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%; }
+  @media (min-width: 800px) {
+    .cont_pro {
+      padding-top: 16px;
+      margin-bottom: 120px; } }
+
+.pro_pro {
+  margin: 16px; }
+  @media (min-width: 800px) {
+    .pro_pro {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      max-width: 100%; } }
+  .pro_pro figure:hover {
+    opacity: 0.5; }
+  .pro_pro img {
+    max-width: 100%;
+    border-radius: 8px; }
+  .pro_pro a {
+    margin: auto;
+    text-decoration: none;
+    color: black; }
+
+#titulo {
+  display: flex; }
+  @media (min-width: 800px) {
+    #titulo {
+      margin: 50px;
+      display: block;
+      text-align: center; } }
+
+@media (min-width: 800px) {
+  #uxui {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 16px; } }
+
+@media (min-width: 800px) {
+  #grafico {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 16px;
+    margin-top: auto; } }
+
+@media (min-width: 800px) {
+  #grafico2 {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 16px;
+    margin-top: auto; } }
+
+@media (min-width: 800px) {
+  .portada {
+    flex: 1; } }
+
+@media (min-width: 800px) {
+  .titulo .subtitulo {
+    font-style: normal; } }
+
+.textos {
+  margin: auto; }
+
+.imagen {
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
+figure {
+  padding: 0;
+  margin: 0;
+  transition-property: opacity;
+  transition-duration: 200ms; }
+
+.nombre_project {
+  z-index: 99;
+  position: static; }
+
+@media (min-width: 800px) {
+  .bicing {
+    width: 584px;
+    height: 367px;
+    margin: 16px; } }
+
+@media (max-width: 799px) {
+  .bicing {
+    max-width: 100%;
+    margin: auto; } }
+
+@media (min-width: 800px) {
+  .make_music {
+    width: 584px;
+    height: 367px;
+    margin: 16px; } }
+
+@media (max-width: 799px) {
+  .make_music {
+    max-width: 100%;
+    margin: auto; } }
+
+@media (min-width: 800px) {
+  .mapple_zoo {
+    width: 584px;
+    height: 367px;
+    margin: 16px; } }
+
+@media (max-width: 799px) {
+  .mapple_zoo {
+    max-width: 100%;
+    margin: auto; } }
+
+@media (min-width: 800px) {
+  .fisica_quimica {
+    width: 584px;
+    height: 367px;
+    margin: 16px; } }
+
+@media (max-width: 799px) {
+  .fisica_quimica {
+    max-width: 100%;
+    margin: auto; } }
+
+@media (min-width: 800px) {
+  .news_paper {
+    width: 584px;
+    height: 367px;
+    margin: 16px; } }
+
+@media (max-width: 799px) {
+  .news_paper {
+    max-width: 100%;
+    margin: auto; } }
+
+@media (min-width: 800px) {
+  .sketching {
+    width: 584px;
+    height: 367px;
+    margin: 16px; } }
+
+@media (max-width: 799px) {
+  .sketching {
+    max-width: 100%;
+    margin: auto; } }
+
+/*
+    section about
+*/
+@media (min-width: 800px) {
+  #sect_desc {
+    display: flex;
+    min-width: 100%;
+    padding-top: 16px;
+    flex-direction: column;
+    margin: 0; } }
+
+.descripcion {
+  margin: auto;
+  max-width: 600px; }
+  @media (min-width: 800px) {
+    .descripcion {
+      column-gap: 16px;
+      max-width: 1100px;
+      display: flex; } }
+
+.photo {
+  margin: 16px; }
+  .photo img {
+    max-width: 100%;
+    border-radius: 8px; }
+    @media (min-width: 800px) {
+      .photo img {
+        width: 390px; } }
+
+@media (min-width: 800px) {
+  .texto {
+    width: 500px; } }
+
+@media (min-width: 800px) {
+  .texto p {
+    text-align: left; } }
+
+@media (min-width: 800px) {
+  .h1 {
+    margin: auto; } }
+
+.name {
+  font-weight: bold; }
+
+/*
+    Section contact
+*/
+.contenido .marco {
+  padding: 0;
+  margin: 0; }
+
+@media (max-width: 799px) {
+  .contenido {
+    display: flex;
+    flex-direction: column; } }
+
+#marco {
+  padding: 0;
+  margin: 0; }
+  @media (min-width: 800px) {
+    #marco {
+      display: flex;
+      column-gap: 24px;
+      justify-content: center; } }
+
+.info {
+  margin: 16px; }
+  .info img {
+    max-width: 100%;
+    border-radius: 8px; }
+    @media (min-width: 800px) {
+      .info img {
+        width: 500px; } }
+
+@media (min-width: 800px) {
+  #seccion-contacto {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column; } }
+
+@media (min-width: 800px) {
+  #contacto {
+    display: flex;
+    flex-direction: column; } }
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  margin: 16px; }
+
+h3,
+p {
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
+.box {
+  padding: 0; }
+  @media (min-width: 800px) {
+    .box {
+      width: 500px;
+      margin: 0; } }
+
+.formulario {
+  margin: 16px; }
+  @media (min-width: 800px) {
+    .formulario {
+      width: 468px; } }
+
+.linea .boton {
+  padding: 0; }
+
+/*
+    Inicio footer
+*/
+.footer {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: auto; }
+
+.todo {
+  display: flex;
+  align-items: center; }
+
+.enlaces ul {
+  display: flex; }
+
+.enlaces li {
+  list-style: none; }
+
+.enlaces img {
+  height: 24px;
+  width: 24px;
+  margin: 16px; }
+
+/*
+    Fin Footer
+*/
+
+/*# sourceMappingURL=estilos_nuevo.css.map */
