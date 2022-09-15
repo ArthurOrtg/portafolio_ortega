@@ -126,7 +126,7 @@ ul {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  margin-top: 100px; }
+  margin-top: 170px; }
   @media (min-width: 800px) {
     .cont_pro {
       padding-top: 16px;
@@ -151,7 +151,8 @@ ul {
     color: black; }
 
 #titulo {
-  display: flex; }
+  display: flex;
+  text-align: center; }
   @media (min-width: 800px) {
     #titulo {
       margin: 50px;
@@ -272,14 +273,16 @@ figure {
 /*
     section about
 */
-@media (min-width: 800px) {
-  #sect_desc {
-    display: flex;
-    min-width: 100%;
-    padding-top: 16px;
-    flex-direction: column;
-    margin: 0;
-    margin-top: 100px; } }
+#sect_desc {
+  margin-top: 170px; }
+  @media (min-width: 800px) {
+    #sect_desc {
+      display: flex;
+      min-width: 100%;
+      padding-top: 16px;
+      flex-direction: column;
+      margin: 0;
+      margin-top: 100px; } }
 
 @media (min-width: 800px) {
   .h1 {
@@ -303,14 +306,15 @@ figure {
       .photo img {
         width: 390px; } }
 
-@media (min-width: 800px) {
-  .texto {
-    width: 500px;
-    font-size: 17px; } }
-
-@media (min-width: 800px) {
-  .texto p {
-    text-align: left; } }
+.texto {
+  font-size: 16px; }
+  @media (min-width: 800px) {
+    .texto {
+      width: 500px;
+      font-size: 17px; } }
+  @media (min-width: 800px) {
+    .texto p {
+      text-align: left; } }
 
 .name {
   font-weight: bold; }
@@ -318,12 +322,14 @@ figure {
 /*
     Section contact
 */
-@media (min-width: 800px) {
-  #seccion-contacto {
-    padding-top: 16px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px; } }
+#seccion-contacto {
+  margin-top: 170px; }
+  @media (min-width: 800px) {
+    #seccion-contacto {
+      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 100px; } }
 
 .contenido .marco {
   padding: 0;
