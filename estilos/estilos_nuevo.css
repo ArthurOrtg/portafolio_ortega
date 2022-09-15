@@ -31,20 +31,10 @@ ul {
   list-style: none; }
 
 .logo_nombre {
-  display: flex;
-  align-items: center;
-  column-gap: 16px;
   margin-left: 16px; }
 
 .logo img {
-  width: 56px; }
-
-.logo_nombre .nombre {
-  font-style: normal;
-  font-size: 20px; }
-  .logo_nombre .nombre a {
-    text-decoration: none;
-    color: black; }
+  height: 64px; }
 
 .menu {
   display: flex;
@@ -59,15 +49,6 @@ ul {
   @media (min-width: 800px) {
     .navegacion {
       display: block; } }
-  @media (max-width: 799px) {
-    .navegacion {
-      width: 90%;
-      max-width: 200px;
-      position: fixed;
-      top: 0;
-      left: -200px;
-      height: 100%;
-      transition: left 0.3s ease-out; } }
   .navegacion ul {
     display: flex;
     column-gap: 16px;
@@ -82,42 +63,13 @@ ul {
       padding: 24px; } }
   .navegacion a {
     margin: auto;
-    text-decoration: none;
-    color: black; }
+    text-decoration: none; }
   .navegacion .link {
     text-align: center;
     align-items: flex-start;
     padding: 16px;
     transition-property: outline;
     transition-duration: 200ms; }
-    .navegacion .link:hover {
-      border-radius: 4px;
-      outline: 1.2px solid black;
-      color: white; }
-
-.boton_menu {
-  background-color: white;
-  padding: 16px 20px;
-  border-radius: 80px;
-  border: 1.5px solid black;
-  font-weight: bold; }
-  @media (min-width: 800px) {
-    .boton_menu {
-      display: none; } }
-
-#boton_menu {
-  display: none; }
-  @media (min-width: 800px) {
-    #boton_menu {
-      display: none; } }
-
-@media (max-width: 799px) {
-  #boton_menu:checked + {
-    left: 0; } }
-
-@media (max-width: 799px) {
-  #boton_menu:checked + .navegacion {
-    left: 0; } }
 
 /*
     section index
@@ -126,7 +78,7 @@ ul {
   display: flex; }
   @media (min-width: 800px) {
     .section {
-      width: 600px;
+      width: 640px;
       margin: auto; } }
   @media (max-width: 799px) {
     .section {
@@ -141,22 +93,31 @@ ul {
   display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
+  margin-top: 100px;
   flex: 1; }
   @media (min-width: 800px) {
     .texto_cita .cita {
       margin-top: 40px;
-      margin-bottom: 40px; } }
+      margin-bottom: 40px;
+      font-size: 20px; } }
+  @media (max-width: 799px) {
+    .texto_cita .cita {
+      text-align: left;
+      margin-top: 40px;
+      font-size: 16px; } }
 
 .texto {
   flex: 1;
   max-width: 100%;
-  margin: 16px; }
+  margin: 16px;
+  font-size: 20px; }
   @media (max-width: 799px) {
     .texto {
       margin: 16px; } }
   @media (max-width: 799px) {
     .texto p {
-      text-align: left; } }
+      text-align: left;
+      margin-top: 40px; } }
 
 /*
     section projects
@@ -164,7 +125,8 @@ ul {
 .cont_pro {
   display: flex;
   flex-direction: column;
-  max-width: 100%; }
+  max-width: 100%;
+  margin-top: 100px; }
   @media (min-width: 800px) {
     .cont_pro {
       padding-top: 16px;
@@ -316,7 +278,12 @@ figure {
     min-width: 100%;
     padding-top: 16px;
     flex-direction: column;
-    margin: 0; } }
+    margin: 0;
+    margin-top: 100px; } }
+
+@media (min-width: 800px) {
+  .h1 {
+    margin: auto; } }
 
 .descripcion {
   margin: auto;
@@ -338,15 +305,12 @@ figure {
 
 @media (min-width: 800px) {
   .texto {
-    width: 500px; } }
+    width: 500px;
+    font-size: 17px; } }
 
 @media (min-width: 800px) {
   .texto p {
     text-align: left; } }
-
-@media (min-width: 800px) {
-  .h1 {
-    margin: auto; } }
 
 .name {
   font-weight: bold; }
@@ -354,6 +318,13 @@ figure {
 /*
     Section contact
 */
+@media (min-width: 800px) {
+  #seccion-contacto {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px; } }
+
 .contenido .marco {
   padding: 0;
   margin: 0; }
@@ -381,22 +352,6 @@ figure {
       .info img {
         width: 500px; } }
 
-@media (min-width: 800px) {
-  #seccion-contacto {
-    padding-top: 16px;
-    display: flex;
-    flex-direction: column; } }
-
-@media (min-width: 800px) {
-  #contacto {
-    display: flex;
-    flex-direction: column; } }
-
-.contacto {
-  display: flex;
-  flex-direction: column;
-  margin: 16px; }
-
 h3,
 p {
   margin-top: 8px;
@@ -417,6 +372,16 @@ p {
 
 .linea .boton {
   padding: 0; }
+
+@media (min-width: 800px) {
+  #contacto {
+    display: flex;
+    flex-direction: column; } }
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  margin: 16px; }
 
 /*
     Inicio footer
@@ -446,5 +411,3 @@ p {
 /*
     Fin Footer
 */
-
-/*# sourceMappingURL=estilos_nuevo.css.map */

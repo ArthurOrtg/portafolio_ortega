@@ -41,26 +41,11 @@ ul {
 }
 
 .logo_nombre {
-    display: flex;
-    align-items: center;
-    column-gap: 16px;
     margin-left: 16px;
 }
 
 .logo img {
-    width: 56px;
-}
-
-.logo_nombre {
-    .nombre {
-        font-style: normal;
-        font-size: 20px;
-
-        a {
-            text-decoration: none;
-            color: black;
-        }
-    }
+    height: 64px;
 }
 
 .menu {
@@ -77,16 +62,6 @@ ul {
 
     @media (min-width: $res_desktop) {
         display: block;
-    }
-
-    @media (max-width: $res_mobile) {
-        width: 90%;
-        max-width: 200px;
-        position: fixed;
-        top: 0;
-        left: -200px;
-        height: 100%;
-        transition: left 0.3s ease-out;
     }
 
     ul {
@@ -110,7 +85,6 @@ ul {
     a {
         margin: auto;
         text-decoration: none;
-        color: black;
     }
 
     .link {
@@ -120,44 +94,6 @@ ul {
         transition-property: outline;
         transition-duration: 200ms;
 
-        &:hover {
-            border-radius: 4px;
-            outline: 1.2px solid black;
-            color: white;
-        }
-    }
-}
-
-
-.boton_menu {
-    background-color: white;
-    padding: 16px 20px;
-    border-radius: 80px;
-    border: 1.5px solid black;
-    font-weight: bold;
-
-    @media (min-width: $res_desktop) {
-        display: none;
-    }
-}
-
-#boton_menu {
-    display: none;
-
-    @media (min-width: $res_desktop) {
-        display: none;
-    }
-}
-
-#boton_menu:checked + {
-    @media (max-width: $res_mobile) {
-        left: 0;
-    }
-
-    .navegacion {
-        @media (max-width: $res_mobile) {
-            left: 0;
-        }
     }
 }
 
@@ -169,7 +105,7 @@ ul {
     display: flex;
 
     @media (min-width: $res_desktop) {
-        width: 600px;
+        width: 640px;
         margin: auto;
     }
 
@@ -189,12 +125,20 @@ ul {
     display: flex;
     padding-top: 100px;
     padding-bottom: 100px;
+    margin-top: 100px;
     flex: 1;
 
     .cita {
         @media (min-width: $res_desktop) {
             margin-top: 40px;
             margin-bottom: 40px;
+            font-size: 20px;
+        }
+
+        @media (max-width: $res_mobile) {
+            text-align: left;
+            margin-top: 40px;
+            font-size: 16px;
         }
     }
 }
@@ -203,6 +147,7 @@ ul {
     flex: 1;
     max-width: 100%;
     margin: 16px;
+    font-size: 20px;
 
     @media (max-width: $res_mobile) {
         margin: 16px;
@@ -211,6 +156,7 @@ ul {
     p {
         @media (max-width: $res_mobile) {
             text-align: left;
+            margin-top: 40px;
         }
     }
 }
@@ -223,6 +169,7 @@ ul {
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    margin-top: 100px;
 
     @media (min-width: $res_desktop) {
         padding-top: 16px;
@@ -410,6 +357,13 @@ figure {
         padding-top: 16px;
         flex-direction: column;
         margin: 0;
+        margin-top: 100px;
+    }
+}
+
+.h1 {
+    @media (min-width: $res_desktop) {
+        margin: auto;
     }
 }
 
@@ -440,18 +394,13 @@ figure {
 .texto {
     @media (min-width: $res_desktop) {
         width: 500px;
+        font-size: 17px;
     }
 
     p {
         @media (min-width: $res_desktop) {
             text-align: left;
         }
-    }
-}
-
-.h1 {
-    @media (min-width: $res_desktop) {
-        margin: auto;
     }
 }
 
@@ -462,6 +411,15 @@ figure {
 /*
     Section contact
 */
+
+#seccion-contacto {
+    @media (min-width: $res_desktop) {
+        padding-top: 16px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+}
 
 .contenido {
     .marco {
@@ -499,27 +457,6 @@ figure {
     }
 }
 
-#seccion-contacto {
-    @media (min-width: $res_desktop) {
-        padding-top: 16px;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-#contacto {
-    @media (min-width: $res_desktop) {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-.contacto {
-    display: flex;
-    flex-direction: column;
-    margin: 16px;
-}
-
 h3,
 p {
     margin-top: 8px;
@@ -547,6 +484,19 @@ p {
     .boton {
         padding: 0;
     }
+}
+
+#contacto {
+    @media (min-width: $res_desktop) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
 }
 
 /*
